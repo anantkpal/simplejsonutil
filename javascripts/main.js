@@ -59,5 +59,7 @@ $('#validateTreeBtn').on('click',validateNTree);
 $('#getjsonval').on('click',getjsonpathvalue);
 $('#jsonstring').change(function(){
 	$('#jsonpath').hide();
+	$('#jsonpath').find('input').val('');
+		$('#jsonpath').find('p').text('');
 });
 });
