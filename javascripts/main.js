@@ -16,6 +16,8 @@ function validateNTree(){
 		moveCursor($('#jsonstring')[0],(position-1));
 		$('#jsonstring').parent().addClass('has-error').removeClass('has-success');
 		$('#jsonpath').hide();
+		$('#jsonpath').find('input').val('');
+		$('#jsonpath').find('p').text('');
 		$('#validateXMLBtn').attr('disabled','disabled');
 	}
 	$('#jsonstring').prev().html(msg);
