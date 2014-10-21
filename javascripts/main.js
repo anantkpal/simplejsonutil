@@ -55,6 +55,11 @@ $('#jsonpathtextstring').text('Value for path \''+path+'\'  : '+value);
 
 $(document).ready(function(){
 
+var currentDocumentLocation=window.location.href;
+currentDocumentLocation=currentDocumentLocation.substring(currentDocumentLocation.indexOf('://')+3)
+if(currentDocumentLocation.indexOf('simplejsonutil')!==0)
+	window.location.href='http://simplejsonutil.anantkpal.in/'
+
 $('#validateTreeBtn').on('click',validateNTree);
 $('#getjsonval').on('click',getjsonpathvalue);
 $('#jsonstring').change(function(){
